@@ -1,0 +1,27 @@
+Ethan R Feldman
+
+1. The use of pivot is to split the list into 2 sections in order to not secceed nlogn time. 
+	You don't need to choose the middle item as the pivot. Using the first item as the pivot 
+	is how quick_sort works, so we already know it's effect -> it sucks if the list is already sorted.
+
+2. In order to fully excercise quick_select we would need to use every value of k between 0 and len(list)-1:
+	k = 0, [0,10,4,2,6] --> 0
+	k = 1, [0,10,4,2,6] --> 2
+	k = 2, [0,10,4,2,6] --> 4
+	k = 3, [0,10,4,2,6] --> 6
+	k = 4, [0,10,4,2,6] --> 10
+	and also try sorting the list in different ways:
+	k = 0, [0,2,4,6,10] --> 0
+	k = 0, [10,6,4,2,0] --> 0
+	k = 0, [10,4,0,6,2] --> 0
+	...
+
+3. Quick select preforms better on a bigger set than quick sort
+	test_data_writeup:   quick_sort_median (1.969999999928973e-05),   quick_select_median (8.000000000230045e-06)
+	test_data1:          quick_sort_median (1.8500000000365446e-05),  quick_select_median (6.5999999998567205e-06)
+	test_data2:          quick_sort_median (2.0100000000411455e-05),  quick_select_median (5.00000000069889e-06)
+	test_dataset1M_odd:  quick_sort_median (3.3906823999999993),      quick_select_median (0.48881149999999707)
+	test_dataset1M:      quick_sort_median (3.5818955000000017),      quick_select_median (1.7940764000000016)
+	test_dataset10K:     quick_sort_median (0.03510150000000323),     quick_select_median (0.010564000000002238)
+	test_dataset100K:    quick_sort_median (0.32497049999999206),     quick_select_median (0.08493640000000369)
+	...

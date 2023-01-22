@@ -1,0 +1,4 @@
+Mall 200
+Offices 70
+PostOffice 170
+MedicalOffice 120
