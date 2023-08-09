@@ -1,4 +1,4 @@
-# Python_Class_Labs
+# Python Labs
 All the labs that I completed in RIT's Python coding class
 
 Labs 1-4 deal with GUIs using Python
